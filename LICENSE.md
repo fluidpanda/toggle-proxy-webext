@@ -1,0 +1,1 @@
+Non-legacy icons by Font Awesome (https://fontawesome.com/license)

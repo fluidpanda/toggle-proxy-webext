@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="chrome://global/skin/in-content/common.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+
+  <div id="incognito-warning" hidden>
+    Incognito access disabled: <strong>Allow</strong> the extension to
+    <strong>Run in Private Windows</strong> (Details tab)
+  </div>
+
+  <div class="container">
+    <fieldset class="proxy-slot" data-slot="proxy1">
+      <legend>Proxy 1</legend>
+      <div class="field-row">
+        <label for="p1-type">Type</label>
+        <select id="p1-type">
+          <option value="socks5">SOCKS5</option>
+          <option value="socks4">SOCKS4</option>
+          <option value="http">HTTP</option>
+          <option value="https">HTTPS</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <label for="p1-host">Host</label>
+        <input type="text" id="p1-host" placeholder="proxy.example.com" spellcheck="false">
+      </div>
+      <div class="field-row">
+        <label for="p1-port">Port</label>
+        <input type="number" id="p1-port" min="1" max="65535" placeholder="1080">
+      </div>
+      <div class="field-row checkbox-row socks-only">
+        <input type="checkbox" id="p1-proxydns">
+        <label for="p1-proxydns">Proxy DNS</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="proxy-slot" data-slot="proxy2">
+      <legend>Proxy 2</legend>
+      <div class="field-row">
+        <label for="p2-type">Type</label>
+        <select id="p2-type">
+          <option value="socks5">SOCKS5</option>
+          <option value="socks4">SOCKS4</option>
+          <option value="http">HTTP</option>
+          <option value="https">HTTPS</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <label for="p2-host">Host</label>
+        <input type="text" id="p2-host" placeholder="proxy.example.com" spellcheck="false">
+      </div>
+      <div class="field-row">
+        <label for="p2-port">Port</label>
+        <input type="number" id="p2-port" min="1" max="65535" placeholder="1080">
+      </div>
+      <div class="field-row checkbox-row socks-only">
+        <input type="checkbox" id="p2-proxydns">
+        <label for="p2-proxydns">Proxy DNS</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="options-section">
+      <legend>Options</legend>
+      <div class="field-row checkbox-row">
+        <input type="checkbox" id="reload">
+        <label for="reload">Reload active tab on toggle</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

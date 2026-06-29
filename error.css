@@ -1,0 +1,11 @@
+html {
+	background-color: FireBrick;
+}
+
+body {
+	color: White;
+}
+
+#error {
+	font-size: small;
+}

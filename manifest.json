@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Toggle Proxy WebExt",
+  "version": "0.0.1",
+
+  "description": "Three-state proxy toggle. Cycle with toolbar button or Alt+X.",
+
+  "developer": {
+    "name": "fluidpanda"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "toggle-proxy-webext@fluidpanda",
+      "strict_min_version": "91.0"
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
+
+  "permissions": ["proxy", "storage"],
+
+  "browser_action": {
+    "browser_style": true
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+X"
+      }
+    }
+  }
+}
